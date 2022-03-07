@@ -16,6 +16,5 @@ theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 domain: domenech-tech.github.io
-# url: https://domenech-tech.github.io
-# baseurl: // 
+
 
