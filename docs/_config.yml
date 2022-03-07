@@ -35,7 +35,7 @@ plugins:
   - jekyll-feed
 domain: domenech-tech.github.io
 url: https://domenech-tech.github.io
-baseurl: /docs/
+baseurl: docs
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
