@@ -29,7 +29,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minimal
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 domain: domenech-tech.github.io
