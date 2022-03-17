@@ -1,0 +1,42 @@
+---
+layout: post
+title:  "TIA Libraries"
+date:   2022-03-07 15:58:59 +0100
+# categories: TIA Libraries
+tags: TIA Libraries
+description: > 
+  Uso de librerias en TIA Portal
+---
+<p>El uso de librerias és básico para que el código evolucione, la mejora continua, la optimización de recursos y la agilidad en el desarrollo.</p>
+<p>Por eso conocer su funcionamiento es importarte para hace un buen uso del mismo</p>
+
+
+<h1>Introducción</h1>
+En TIA hay dos tipos de librerias: 
+<ul>
+  <li>Librerias de proyecto</li>
+  <li>Librerias globales</li>
+</ul>
+<p>
+  Los dos tipos funcionan de la misma manera, la diferencia es que el alcance de la primera se limita al proyecto y en cambio las
+  globales pueden usarse en distintos proyectos.
+</p>
+
+<h2>Elementos que conforman una libreria</h2>
+<p>En una libreria siemens encontramos dos tipos de objectos claramente diferenciados.</p>
+<ul>
+  <li>Types</li>
+  <li>Master Copies</li>
+</ul>
+<p>
+  La diferencia entre los dos tipos es que los objetos tipificados (Types) permiten hacer versiones del mismso.
+  Su uso es el adecuado para FBs,FCs a nivel de PLC y para faceplates, Pop-up a nivel HMI.
+  Ya que permiten ir evolucionando el coódiga a traves de las distintas versiones.
+  Tambien permiten actualizar el código en todo el proyecto de forma automática.
+</p>
+<p>
+  Las copias maestras (master copies) son objectos estáticos y que pocas veces suelen evolucionar.
+  Es el caso de objetos estáticos de la pantalla, codigo de configurarión, DBs de constantes, parámetros. 
+  Este tipo de cosas.
+</p>
+
