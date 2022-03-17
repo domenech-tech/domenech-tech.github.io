@@ -1,8 +1,7 @@
 ---
 layout: post
 title:  "Entendiendo EPLAN"
-date:   2022-03-07 15:58:59 +0100
-# categories: eplan paperToCode
+date:   2022-03-07
 tags: EPLAN
 description: > 
   En cualquier proyecto de automatización, sí o sí,  tendremos que lidiar con esquemas eléctricos. 

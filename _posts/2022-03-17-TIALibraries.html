@@ -1,12 +1,11 @@
 ---
 layout: post
-title:  "TIA Libraries"
-date:   2022-03-07 15:58:59 +0100
-# categories: TIA Libraries
+title: TIA Libraries
+date: 2022-03-17
 tags: TIA Libraries
-description: > 
-  Uso de librerias en TIA Portal
+description: Uso de librerias en TIA Portal
 ---
+
 <p>El uso de librerias és básico para que el código evolucione, la mejora continua, la optimización de recursos y la agilidad en el desarrollo.</p>
 <p>Por eso conocer su funcionamiento es importarte para hace un buen uso del mismo</p>
 
@@ -40,3 +39,61 @@ En TIA hay dos tipos de librerias:
   Este tipo de cosas.
 </p>
 
+<h2>Ejemplo de aplicación de uso de librerias</h2>
+<p>Exponemos a continuación, como ejemplo, el uso de librerias para la generación automatica de pantallas HMI</p>
+<ol>
+  <li>Añadimosuna HMI al proyecto. En este ejemplo se trata de una TP900 </li>
+  <li>Añadimos los Script HMI
+    <pre>
+      Global Library -> Types -> HMI -> WinCCComfort -> Scripts
+    </pre>
+    Los scripts de las pantallas tienden a ser modificados para adaptarse a nuevas especificaciones. Añadir características o mejorar el código.
+  </li>
+  <li>
+    User management
+    <pre>
+      Global Library -> Master Copies -> HMI -> WinCCComfort -> UserManagement
+    </pre>
+    La gestión de usuarios no suele modificarse y es constante entre proyectos.
+    <ul>
+      <li>Authorizations</li>
+      <li>UserGroups</li>
+      <li>Users</li>
+    </ul>
+  </li>
+  <li>
+    Pop-ups
+    <pre>
+      Global Library -> Master Copies -> HMI -> ScreenManagement -> Pop-ups 
+    </pre>
+    Los pop-ups suelen ser siempre los mismos. Solamente cambian al modificar el FB asociado.
+    Quiza en una fase inicial de sesarrollo de un nuevo FB sí convendria que estuviera tipificado per en la fase 
+    de producción no deberia modificarse.
+  </li>
+  <li>
+    Screens (Navigation)
+    <p>Son el conjunto de pantallas que nos permiten navegar por nuestra aplicacón. Contienen los menús, logins, ajustes de pantalla como idioma, brillo.</p>
+    <pre>
+      Global Librery -> Master Copy -> HMI -> Comfort -> Screens -> App 
+    </pre>
+  </li>
+  <li>
+    <p>Runtime Languages</p>
+    <p>Normalmente se utliza Ingles, Aleman y castellano.</p>
+  </li>
+  <li>
+    Slide-in Screens
+    En el proyecto habilitamos las Slide-in right y le añadimos los objetos de la libreria.
+    La slide-in se suele utilizar para navegar por la App. Ir a las distintas pantallas: Settings, alarmas, etc
+  </li>
+  <li>
+    <p>Schedule tasks</p>
+    <p>Son las tareas programadas. Nosotros las utilizamos, por ejemplo, para ejecutar un script a cada cada cambio de usuario </p>
+  </li>
+  <li>
+    Activar el SiVarc generation
+  </li>
+  <li>
+    Una vez finalizado hemos de actualizar la connexion de los tags de la tabla "PLC_PanelBlocks" segun la conexión de la HMI con el PLC.
+  </li>
+</ol>
